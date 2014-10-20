@@ -17,21 +17,22 @@ class ColorizingStreamHandler(logging.StreamHandler):
 
     :param strm: The stream to colorize - typically ``sys.stdout``
                  or ``sys.stderr``.
+
+    Common usage is to derive a new class and set the level_map
+    class ColorLog(ColorizingStreamHandler):
+        def __init__(self, *args, **kwargs):
+            super(ColorLog, self).__init__(*args, **kwargs)
+            self.level_map = {
+                logging.DEBUG: (None, 'blue', True),
+                logging.INFO: (None, 'white', False),
+                logging.WARNING: (None, 'yellow', True),
+                logging.ERROR: (None, 'red', True),
+                logging.CRITICAL: ('red', 'white', True),
+            }
+   
+    then use this class as your handler 
     """
-    color_map = {
-            'black': 0,
-            'red': 1,
-            'green': 2,
-            'yellow': 3,
-            'blue': 4,
-            'magenta': 5,
-            'cyan': 6,
-            'white': 7,
-    }
-    csi = '\x1b['
-    reset = '\x1b[0m'
     def __init__(self, *args, **kwargs):
-        # color names to indices
 
         #levels to (background, foreground, bold/intense)
         if os.name == 'nt':
@@ -53,8 +54,7 @@ class ColorizingStreamHandler(logging.StreamHandler):
             }
 
         return super(ColorizingStreamHandler, self).__init__()
-   
-    """ 
+    
     # color names to indices
     color_map = {
         'black': 0,
@@ -66,29 +66,9 @@ class ColorizingStreamHandler(logging.StreamHandler):
         'cyan': 6,
         'white': 7,
     }
-
-    #levels to (background, foreground, bold/intense)
-    if os.name == 'nt':
-        level_map = {
-            logging.DEBUG: (None, 'blue', True),
-            logging.INFO: (None, 'white', False),
-            logging.WARNING: (None, 'yellow', True),
-            logging.ERROR: (None, 'red', True),
-            logging.CRITICAL: ('red', 'white', True),
-        }
-    else:
-        "Maps levels to colour/intensity settings."
-        level_map = {
-            logging.DEBUG: (None, 'blue', False),
-            logging.INFO: (None, 'white', False),
-            logging.WARNING: (None, 'yellow', False),
-            logging.ERROR: (None, 'red', False),
-            logging.CRITICAL: ('red', 'white', True),
-        }
-    
     csi = '\x1b['
     reset = '\x1b[0m'
-    """
+   
     @property
     def is_tty(self):
         "Returns true if the handler's stream is a terminal."
