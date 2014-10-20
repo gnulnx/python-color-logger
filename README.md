@@ -49,4 +49,4 @@ CONFIG = {
 L = logging.getLogger('info')
 L.info("Hello world")
 ```
-
+<p style='color:red'>This is some red text.</p>
