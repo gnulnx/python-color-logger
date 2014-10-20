@@ -47,8 +47,11 @@ CONFIG = {
 
 
 L = logging.getLogger('info')
-L.info("Hello world")
-```
-```html
-<p style='color:green'>Hello world.</p>
+
+L.debug("Hello world") # output should be in blue
+L.info("Hello world") # output should be in green
+L.warn("Hello world") # output should be in yellow
+L.error("Hello world") # output should be in red
+L.critical("Hello world") # output should be in white with a red back ground
+
 ```
