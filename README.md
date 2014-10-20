@@ -27,7 +27,7 @@ CONFIG = {
     'disable_existing_loggers': True,
     'handlers':{
         'console': {
-            'class':'vagabond.logger.logger.ColorHandler',
+            'class':'module.path.to.your.derived.class.ColorHandler',
             'info':'white',
             'level': 'DEBUG',
             'formatter': 'detailed',
