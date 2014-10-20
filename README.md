@@ -10,7 +10,7 @@ in class derioved from ColorizingStreamHandler
 
 Example:
 
-```
+```python
 class ColorHandler(ColorizingStreamHandler):
     def __init__(self, *args, **kwargs):
         super(ColorHandler, self).__init__(*args, **kwargs)
@@ -48,8 +48,5 @@ CONFIG = {
 
 L = logging.getLogger('info')
 L.info("Hello world")
-
-<font style="color: green"> Some green text </span>
-//<span style="color: green"> Some green text </span>
 ```
 
