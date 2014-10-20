@@ -1,0 +1,4 @@
+Original author: Vinay Sajip 
+    Original code: https://bitbucket.org/vinay.sajip/logutils/
+
+John Furr - Added support for custom colorign in subclasses
