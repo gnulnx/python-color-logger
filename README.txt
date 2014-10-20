@@ -1,6 +1,13 @@
-logutils 0.3.3
+python-color-logger 0.3.3
 ==============
-The logutils package provides a set of handlers for the Python standard
+The python-color-logger packages is a fork of logutils 0.3.3.
+The original author of logutils is Vinay Sajip and his project 
+can be found at:  http://code.google.com/p/logutils/
+
+The python-color-logger fork provides an easy way to provide custom
+log coloring via sublcassing ColorizingStreamHandler
+
+The python-color-logger package provides a set of handlers for the Python standard
 library's logging package.
 
 Some of these handlers are out-of-scope for the standard library, and
@@ -10,7 +17,7 @@ of Python and so are packaged here.
 
 Requirements & Installation
 ---------------------------
-The logutils package requires Python 2.5 or greater, and can be
+The python-color-logger package requires Python 2.5 or greater, and can be
 installed with the standard Python installation procedure:
 
   python setup.py install
@@ -25,5 +32,5 @@ Availability & Documentation
 ----------------------------
 The latest version of logutils can be found at:
 
-  http://code.google.com/p/logutils/
+    https://github.com/gnulnx/python-color-logger
 
