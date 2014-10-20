@@ -49,7 +49,7 @@ CONFIG = {
 L = logging.getLogger('info')
 L.info("Hello world")
 
-<span style="color: green"> Some green text </span>
+<font style="color: green"> Some green text </span>
 //<span style="color: green"> Some green text </span>
 ```
 
