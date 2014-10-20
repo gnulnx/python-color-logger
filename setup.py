@@ -36,11 +36,11 @@ class TestCommand(distutils.core.Command):
         pass
 
 distutils.core.setup(
-    name='logutils',
+    name='python-color-logger',
     version=logutils.__version__,
-    author='Vinay Sajip',
-    author_email='vinay_sajip@red-dove.com',
-    url='http://code.google.com/p/logutils/',
+    author='Vinay Sajip, John Furr',
+    author_email='john.furr@gmail.com',
+    url='https://github.com/gnulnx/python-color-logger',
     description='Logging utilities',
     long_description = description(),
     license='Copyright (C) 2010-2013 by Vinay Sajip. All Rights Reserved. See LICENSE.txt for license.',
