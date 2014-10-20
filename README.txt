@@ -26,11 +26,13 @@ There is a set of unit tests which you can invoke with
 
   python setup.py test
   
-before running the installation.
+before running the installation.  And of course you can simply
+
+  pip install python-color-logger
 
 Availability & Documentation
 ----------------------------
-The latest version of logutils can be found at:
+The latest version of python-color-logger can be found at:
 
     https://github.com/gnulnx/python-color-logger
 
