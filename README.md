@@ -7,7 +7,7 @@ The original code for this project was written by Vinay Sajip and is hosted at: 
 the original documentation for this project is at: http://plumberjack.blogspot.co.uk/2010/12/colorizing-logging-output-in-terminals.html
 
 pthon-color-logger forked this project at version 0.3.3 to add support for custom coloring 
-in classses derived from ColorizingStreamHandler
+in classses derived from ColorizingStreamHandler.
 
 Install: 
 
