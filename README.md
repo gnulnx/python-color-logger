@@ -9,6 +9,11 @@ the original documentation for this project is at: http://plumberjack.blogspot.c
 pthon-color-logger forked this project at version 0.3.3 to add support for custom coloring 
 in classses derived from ColorizingStreamHandler
 
+Usage:
+
+pip install python-color-logger
+-------------------------------
+
 Example:
 
 ```
