@@ -23,6 +23,7 @@ class ColorizingStreamHandler(logging.StreamHandler):
         def __init__(self, *args, **kwargs):
             super(ColorLog, self).__init__(*args, **kwargs)
             self.level_map = {
+                #logger: bg, fg, bold
                 logging.DEBUG: (None, 'blue', True),
                 logging.INFO: (None, 'white', False),
                 logging.WARNING: (None, 'yellow', True),

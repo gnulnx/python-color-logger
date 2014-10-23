@@ -4,11 +4,12 @@ The python-color-logger packages is a fork of logutils 0.3.3.
 The original author of logutils is Vinay Sajip and his project 
 can be found at:  http://code.google.com/p/logutils/
 
-The python-color-logger fork provides an easy way to provide custom
-log coloring via sublcassing ColorizingStreamHandler
-
-The python-color-logger package provides a set of handlers for the Python standard
+The logutils package provides a set of handlers for the Python standard
 library's logging package.
+
+The python-color-logger fork extends logutils to provide custom log 
+coloring via sublcassing ColorizingStreamHandler.
+
 
 Some of these handlers are out-of-scope for the standard library, and
 so they are packaged here. Others are updated versions which have

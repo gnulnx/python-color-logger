@@ -4,13 +4,21 @@ import distutils.core
 import logutils
 from os.path import join, dirname, abspath
 import re
+import os
 
 
 def description():
+    try:
+        import pypandoc
+        description = pypandoc.convert('README.md', 'rst')
+        return description
+    except (IOError, ImportError):
+        pass
+
     f = open(join(dirname(__file__), 'README.txt'))
     readme = f.read()
     f.close()
-    regexp = r'^logutils\s*[\d.]*\s*\n=======+\s*\n(.*)Requirements '
+    regexp = r'^python-color-logger\s*[\d.]*\s*\n=======+\s*\n(.*)Requirements '
     reqts, = re.findall(regexp, readme, re.DOTALL)
     regexp = r'Availability & Documentation\s*\n-----+\s*\n(.*)'
     avail, = re.findall(regexp, readme, re.DOTALL)
@@ -38,7 +46,7 @@ class TestCommand(distutils.core.Command):
 distutils.core.setup(
     name='python-color-logger',
     version=logutils.__version__,
-    author='Vinay Sajip, John Furr',
+    author='Vinay Sajip (author of logutils), John Furr (Maintainer of python-color-logger fork)',
     author_email='john.furr@gmail.com',
     url='https://github.com/gnulnx/python-color-logger',
     description='Logging utilities',
