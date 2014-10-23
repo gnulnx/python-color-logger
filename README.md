@@ -11,7 +11,7 @@ in classses derived from ColorizingStreamHandler
 
 Usage:
 
-#pip install python-color-logger
+###pip install python-color-logger
 
 
 Example:
