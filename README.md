@@ -11,7 +11,13 @@ in class derioved from ColorizingStreamHandler
 
 Example:
 
-```python
+```
+#!/usr/bin/env python
+import logging
+import logging.config
+
+from logutils.colorize import ColorizingStreamHandler
+
 class ColorHandler(ColorizingStreamHandler):
     def __init__(self, *args, **kwargs):
         super(ColorHandler, self).__init__(*args, **kwargs)
@@ -22,18 +28,18 @@ class ColorHandler(ColorizingStreamHandler):
                 logging.ERROR: (None, 'red', False),
                 logging.CRITICAL: ('red', 'white', True),
         }
-
 CONFIG = {
     'version':1,
     'disable_existing_loggers': True,
     'handlers':{
         'console': {
-            'class':'module.path.to.your.derived.class.ColorHandler',
+            '()':ColorHandler,
             'info':'white',
             'level': 'DEBUG',
             'formatter': 'detailed',
             'stream': 'ext://sys.stdout',
         },
+    },
     'formatters': {
         'detailed': {
             'format': '%(asctime)s %(module)s line:%(lineno)-4d %(levelname)-8s %(message)s',
@@ -44,9 +50,10 @@ CONFIG = {
             'level':'DEBUG',
             'handlers':['console'],
         },
+    },
 }
 
-
+logging.config.dictConfig(CONFIG)
 L = logging.getLogger('info')
 
 L.debug("Hello world") # output should be in blue
