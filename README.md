@@ -1,13 +1,13 @@
 python-color-logger
 ===================
 
-A ColorizingStreamHandler forked from Vinay Sajip logutils:  https://bitbucket.org/vinay.sajip/logutils/
+Simple custom color logging for python
 
 The original code for this project was written by Vinay Sajip and is hosted at: https://bitbucket.org/vinay.sajip/logutils/
 the original documentation for this project is at: http://plumberjack.blogspot.co.uk/2010/12/colorizing-logging-output-in-terminals.html
 
-pthon-color-logger forked this project at version 0.3.3 to add support for curstom coloring 
-in class derioved from ColorizingStreamHandler
+pthon-color-logger forked this project at version 0.3.3 to add support for custom coloring 
+in classses derived from ColorizingStreamHandler
 
 Example:
 
@@ -22,6 +22,7 @@ class ColorHandler(ColorizingStreamHandler):
     def __init__(self, *args, **kwargs):
         super(ColorHandler, self).__init__(*args, **kwargs)
         self.level_map = {
+                # Provide you custom coloring information here
                 logging.DEBUG: (None, 'blue', False),
                 logging.INFO: (None, 'green', False),
                 logging.WARNING: (None, 'yellow', False),
