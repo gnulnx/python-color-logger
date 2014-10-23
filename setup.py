@@ -13,7 +13,8 @@ def description():
         description = pypandoc.convert('README.md', 'rst')
         return description
     except (IOError, ImportError) as e:
-        raise
+        print "YOU DID NOT CONVERT README.MD"
+        pass
 
     f = open(join(dirname(__file__), 'README.txt'))
     readme = f.read()
