@@ -1,7 +1,7 @@
 python-color-logger
 ===================
 
-Simple custom color logging for python
+Simple custom color logging for python.
 
 The original code for this project was written by Vinay Sajip and is hosted at: https://bitbucket.org/vinay.sajip/logutils/
 the original documentation for this project is at: http://plumberjack.blogspot.co.uk/2010/12/colorizing-logging-output-in-terminals.html
