@@ -1,4 +1,4 @@
-python-color-logger 0.3.3
+python-color-logger 0.3.5
 ==============
 The python-color-logger packages is a fork of logutils 0.3.3.
 The original author of logutils is Vinay Sajip and his project 
