@@ -82,7 +82,12 @@ class ColorizingStreamHandler(logging.StreamHandler):
             stream = self.stream
             if unicode and isinstance(message, unicode):
                 enc = getattr(stream, 'encoding', 'utf-8')
-                message = message.encode(enc, 'replace')
+                if enc:
+                    message = message.encode(enc, 'replace')
+                else:
+                    # If encoding is None getattr returns None so we force to utf-8 here
+                    message = message.encode('utf-8', 'replace')
+
             if not self.is_tty:
                 stream.write(message)
             else:

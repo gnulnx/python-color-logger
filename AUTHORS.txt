@@ -1,5 +1,7 @@
 Original author: Vinay Sajip 
     Original code: https://bitbucket.org/vinay.sajip/logutils/
 
-John Furr - Added support for custom coloring in ColorizingStreamHandler subclasses
+John Furr - Curernt Maintainer:  Added support for custom coloring in ColorizingStreamHandler subclasses
     Forked and hosted on github under python-color-logger
+
+the-yeti - fixed multiline coloring
